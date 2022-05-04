@@ -51,6 +51,17 @@ function App() {
         return filterYears.includes(movie.year);
       }
     });
+  const searchMovies = () => {
+    if (filterMovie !== '' && movieFilters.length === 0) {
+      return (
+        <p className="error-message">
+          Ups! 😅 "{filterMovie}" no existe, prueba con otro nombre
+        </p>
+      );
+    } else {
+      return <MovieList movies={movieFilters} />;
+    }
+  };
 
   const getYears = () => {
     const movieYears = dataMovies.map((movie) => movie.year);
@@ -85,7 +96,8 @@ function App() {
                   handleFilterYear={handleFilterYear}
                   years={getYears()}
                 />
-                <MovieList movies={movieFilters} />
+                {/* <MovieList movies={movieFilters} /> */}
+                {searchMovies()}
               </>
             }
           />
