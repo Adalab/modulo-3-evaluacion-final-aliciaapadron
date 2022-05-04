@@ -3,7 +3,7 @@ import FilterYear from './FilterYear';
 function Filters(props) {
   return (
     <section className="col2">
-      <form>
+      <form onSubmit={props.handleSubmit}>
         <FilterMovie handleFilterMovie={props.handleFilterMovie} />
         <FilterYear
           years={props.years}

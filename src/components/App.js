@@ -27,6 +27,10 @@ function App() {
     }
   }, []);
 
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
   //filtro por nombre de película
   const handleFilterMovie = (value) => {
     setFilterMovie(value);
@@ -76,6 +80,7 @@ function App() {
             element={
               <>
                 <Filters
+                  handleSubmit={handleSubmit}
                   handleFilterMovie={handleFilterMovie}
                   handleFilterYear={handleFilterYear}
                   years={getYears()}

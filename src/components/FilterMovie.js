@@ -1,4 +1,7 @@
 function FilterMovie(props) {
+  // const handleClick = (ev) => {
+  //   ev.preventDefault();
+  // };
   const handleChange = (ev) => {
     props.handleFilterMovie(ev.target.value);
   };
@@ -12,6 +15,7 @@ function FilterMovie(props) {
         id="name"
         value={props.filterMovie}
         onChange={handleChange}
+        // onClick={handleClick}
         placeholder="Buscar por película"
       />
     </fieldset>
