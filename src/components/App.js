@@ -1,33 +1,32 @@
+import '../styles/App.scss';
 import { useState, useEffect } from 'react';
 import getApiData from '../services/api';
-// import UserList from './UserList';
-// import Filters from './Filters';
+import MovieList from './MovieList';
+import Filters from './Filters';
 
 function App() {
-  const [dataUsers, setDataUsers] = useState([]);
-  const [filterCountry, setFilterCountry] = useState('');
-
+  const [dataMovies, setDataMovies] = useState([]);
+  const [filterMovie, setFilterMovie] = useState('');
   useEffect(() => {
     getApiData().then((dataFromApi) => {
-      console.log(dataFromApi);
-      setDataUsers(dataFromApi);
+      setDataMovies(dataFromApi);
     });
   }, []);
 
-  //   const handleFilterCountry = (value) => {
-  //     setFilterCountry(value);
-  //   };
+  const handleFilterMovie = (value) => {
+    setFilterMovie(value);
+  };
 
-  //   const userFilters = dataUsers.filter((user) => {
-  //     return user.country === filterCountry;
-  //   });
+  const movieFilters = dataMovies.filter((movie) => {
+    return movie.name.toLowerCase().includes(filterMovie.toLocaleLowerCase());
+  });
   return (
     <>
       <h1 className="title--big">Directorio de películas</h1>
-      {/* <div className="col2">
-        <Filters handleFilterCountry={handleFilterCountry} />
-        <UserList users={userFilters} />
-      </div> */}
+      <div className="col2">
+        <Filters handleFilterMovie={handleFilterMovie} />
+        <MovieList movies={movieFilters} />
+      </div>
     </>
   );
 }
