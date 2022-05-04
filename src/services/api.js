@@ -11,6 +11,8 @@ const getApiData = () => {
           name: movie.movie,
           quote: movie.full_line,
           year: movie.year.toString(),
+          director: movie.director,
+          audio: movie.audio,
         };
       });
       return dataClean;
