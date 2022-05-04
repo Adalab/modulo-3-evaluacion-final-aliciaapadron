@@ -1,15 +1,14 @@
 import FilterMovie from './FilterMovie';
-// import FilterCity from './FilterCity';
+import FilterYear from './FilterYear';
 function Filters(props) {
   return (
     <section className="col2">
       <form>
         <FilterMovie handleFilterMovie={props.handleFilterMovie} />
-        {/* <FilterCity
-          cities={props.cities}
-          handleFilterCity={props.handleFilterCity}
-        /> */}
-        {/*<FilterName />*/}
+        <FilterYear
+          years={props.years}
+          handleFilterYear={props.handleFilterYear}
+        />
       </form>
     </section>
   );

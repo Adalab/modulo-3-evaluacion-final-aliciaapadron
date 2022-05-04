@@ -10,7 +10,7 @@ const getApiData = () => {
           poster: movie.poster,
           name: movie.movie,
           quote: movie.full_line,
-          year: movie.year,
+          year: movie.year.toString(),
         };
       });
       return dataClean;
