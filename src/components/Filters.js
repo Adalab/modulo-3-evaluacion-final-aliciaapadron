@@ -4,8 +4,8 @@ import ResetButton from './ResetButton';
 
 function Filters(props) {
   return (
-    <section className="col2">
-      <form onSubmit={props.handleSubmit}>
+    <section>
+      <form className="form" onSubmit={props.handleSubmit}>
         <FilterMovie
           handleFilterMovie={props.handleFilterMovie}
           filterMovie={props.filterMovie}

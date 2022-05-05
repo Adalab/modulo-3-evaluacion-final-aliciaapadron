@@ -7,17 +7,19 @@ function FilterMovie(props) {
   };
   console.log(props);
   return (
-    <fieldset>
-      <label htmlFor="name">Película</label>
+    <fieldset className="fielset">
+      <label className="fielset__label" htmlFor="name">
+        Buscar por película
+      </label>
       <input
-        className=""
+        className="fielset__input"
         type="search"
         name="name"
         id="name"
         value={props.filterMovie}
         onChange={handleChange}
         // onClick={handleClick}
-        placeholder="Buscar por película"
+        placeholder="Película"
       />
     </fieldset>
   );

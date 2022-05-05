@@ -15,6 +15,8 @@ import MovieDetail from './MovieDetail';
 //localStorage
 import ls from '../services/localStorage';
 import ClearLocalStorage from './ResetButton';
+import Header from './Header';
+import Footer from './Footer';
 
 //componentes de estado
 function App() {
@@ -69,11 +71,7 @@ function App() {
   //mensaje que error
   const searchMovies = () => {
     if (filterMovie !== '' && movieFilters.length === 0) {
-      return (
-        <p className="error-message">
-          Ups! 😅 "{filterMovie}" no existe, prueba con otro nombre
-        </p>
-      );
+      return <p>Ups! 😅 "{filterMovie}" no existe, prueba con otro nombre</p>;
     } else {
       return <MovieList movies={movieFilters} />;
     }
@@ -105,14 +103,13 @@ function App() {
 
   return (
     <>
-      <h1 className="title--big">Directorio de películas</h1>
-      <div className="col2">
+      <div>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                {/* <ClearLocalStorage /> */}
+                <Header />
                 <Filters
                   handleSubmit={handleSubmit}
                   handleFilterMovie={handleFilterMovie}
@@ -122,6 +119,7 @@ function App() {
                   resetInputs={resetInputs}
                 />
                 {searchMovies()}
+                <Footer />
               </>
             }
           />

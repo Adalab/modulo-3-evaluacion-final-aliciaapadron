@@ -1,0 +1,44 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: center;
+  &__item {
+    border: solid 2px yellow;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+
+    &--img {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &--title {
+      padding: 5px 0;
+      display: flex;
+      justify-content: center;
+      color: white;
+    }
+    &--year {
+      padding: 5px 0;
+      display: flex;
+      justify-content: center;
+      color: grey;
+      font-weight: bolder;
+    }
+    &--quote {
+      padding: 5px 0;
+      width: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      color: grey;
+      font-weight: bolder;
+    }
+  }
+}

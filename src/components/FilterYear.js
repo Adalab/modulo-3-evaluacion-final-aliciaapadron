@@ -13,11 +13,13 @@ function FilterYear(props) {
   };
   return (
     <>
-      <label className="form__label display-block">Años</label>
-      <select onChange={handleChange}>
-        <option value="">Años</option>
-        {renderYears()}
-      </select>
+      <fielset className="fielset">
+        <label className="fielset__label">Años</label>
+        <select className="fielset__select" onChange={handleChange}>
+          <option value="">Años</option>
+          {renderYears()}
+        </select>
+      </fielset>
     </>
   );
 }
