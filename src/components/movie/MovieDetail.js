@@ -16,7 +16,7 @@ function MovieDetail(props) {
 
         <article>
           <h4 className="detail__article--title">
-            Título: <span className="span">{props.movie.name}</span>
+            Title: <span className="span">{props.movie.name}</span>
           </h4>
           <p className="detail__article--director">
             <FontAwesomeIcon className="icon" icon={faVideoCamera} />
@@ -24,11 +24,11 @@ function MovieDetail(props) {
           </p>
           <p className="detail__article--year">
             <FontAwesomeIcon className="icon" icon={faCalendarDays} />
-            Año: {props.movie.year}
+            Year: {props.movie.year}
           </p>
           <p className="detail__article--quote">
             <FontAwesomeIcon className="icon" icon={faQuoteRight} />
-            Frase: {props.movie.quote}
+            Quote: "{props.movie.quote}"
           </p>
 
           <div className="div">
@@ -38,7 +38,7 @@ function MovieDetail(props) {
           </div>
           <div className="div">
             <Link className="div__btn" to="/">
-              Volver
+              Back
             </Link>
           </div>
         </article>

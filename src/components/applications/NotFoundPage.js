@@ -1,7 +1,7 @@
 function NotFoundPage() {
   return (
     <p className="pageerror">
-      💣💻 La URL que has introducido no es válida. Inténtalo de nuevo.😉
+      💣💻 The URL you entered is not valid. Try again.😉
     </p>
   );
 }

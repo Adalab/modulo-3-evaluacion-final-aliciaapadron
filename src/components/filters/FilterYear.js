@@ -14,10 +14,10 @@ function FilterYear(props) {
   return (
     <>
       <fieldset className="fieldset">
-        <label className="fieldset__label">Años</label>
+        <label className="fieldset__label">Years</label>
         <select className="fieldset__select" onChange={handleChange}>
           <option className="option" value="">
-            Años
+            All
           </option>
           {renderYears()}
         </select>

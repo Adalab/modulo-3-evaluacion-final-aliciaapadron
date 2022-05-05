@@ -10,7 +10,7 @@ function User(props) {
       />
       <h4 className="list__item--title">{props.movie.name}</h4>
       <p className="list__item--year">{props.movie.year}</p>
-      <p className="list__item--quote">{props.movie.quote}</p>
+      <p className="list__item--quote">"{props.movie.quote}"</p>
     </Link>
   );
 }

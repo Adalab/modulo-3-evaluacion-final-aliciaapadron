@@ -75,7 +75,7 @@ function App() {
         <section className="section">
           <div className="section__diverror">
             <p className="section__diverror--msn">
-              Ups! 😅 "{filterMovie}" no existe, prueba con otra peli.
+              Ups! 😅 "{filterMovie}" does not exist, try another movie.
             </p>
           </div>
         </section>

@@ -8,7 +8,7 @@ function FilterMovie(props) {
   return (
     <fieldset className="fieldset">
       <label className="fieldset__label" htmlFor="name">
-        Buscar por película
+        Movie
       </label>
       <input
         className="fieldset__input"
@@ -18,7 +18,7 @@ function FilterMovie(props) {
         value={props.filterMovie}
         onChange={handleChange}
         // onClick={handleClick}
-        placeholder="Película"
+        placeholder="Bottle Rocket"
       />
     </fieldset>
   );
