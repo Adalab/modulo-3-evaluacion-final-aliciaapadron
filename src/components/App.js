@@ -11,6 +11,7 @@ import getApiData from '../services/api';
 import MovieList from './MovieList';
 import Filters from './Filters';
 import MovieDetail from './MovieDetail';
+import NotFoundPage from './NotFoundPage';
 
 //localStorage
 import ls from '../services/localStorage';
@@ -135,7 +136,7 @@ function App() {
             path="/movie/:movieId"
             element={<MovieDetail movie={movieFound} />}
           />
-          <Route path="/" element={<MovieDetail />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </>
