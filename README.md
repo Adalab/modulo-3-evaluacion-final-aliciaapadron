@@ -8,8 +8,7 @@ Vamos a usar React para realizarlo.
 
 En primer lugar, vamos a realizar una web con el listado de 50 escenas donde el actor Owen Wilson ha
 dicho 'wow'.
-Para eso, vamos a utilizar el servicio de [esta URL](https://owen-wilson-wow-api.herokuapp.com/wows/random?
-results=50) que nos devuelve información de 50 escenas de películas aleatorias. Sobre cada una, vamos a
+Para eso, vamos a utilizar el servicio de [esta URL](https://owen-wilson-wow-api.herokuapp.com/wows/random?results=50) que nos devuelve información de 50 escenas de películas aleatorias. Sobre cada una, vamos a
 mostrar al menos:
 Poster (poster)
 Película (movie)
