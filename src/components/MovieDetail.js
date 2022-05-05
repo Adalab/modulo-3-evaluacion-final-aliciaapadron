@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVideoCamera } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 function MovieDetail(props) {
   return (
     <>
@@ -15,10 +19,17 @@ function MovieDetail(props) {
             Título: <span className="span">{props.movie.name}</span>
           </h4>
           <p className="detail__article--director">
+            <FontAwesomeIcon className="icon" icon={faVideoCamera} />
             Director: {props.movie.director}
           </p>
-          <p className="detail__article--year">Año: {props.movie.year}</p>
-          <p className="detail__article--quote">Frase: {props.movie.quote}</p>
+          <p className="detail__article--year">
+            <FontAwesomeIcon className="icon" icon={faCalendarDays} />
+            Año: {props.movie.year}
+          </p>
+          <p className="detail__article--quote">
+            <FontAwesomeIcon className="icon" icon={faQuoteRight} />
+            Frase: {props.movie.quote}
+          </p>
 
           <div className="div">
             <a target="_blank" className="div__audio" href={props.movie.audio}>

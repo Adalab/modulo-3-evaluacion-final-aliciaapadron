@@ -71,7 +71,15 @@ function App() {
   //mensaje que error
   const searchMovies = () => {
     if (filterMovie !== '' && movieFilters.length === 0) {
-      return <p>Ups! 😅 "{filterMovie}" no existe, prueba con otro nombre</p>;
+      return (
+        <section className="section">
+          <div className="section__diverror">
+            <p className="section__diverror--msn">
+              Ups! 😅 "{filterMovie}" no existe, prueba con otra peli.
+            </p>
+          </div>
+        </section>
+      );
     } else {
       return <MovieList movies={movieFilters} />;
     }
