@@ -50,3 +50,7 @@ el enlace del audio de la escena, al darle clic debe mostrarse en una pestaña a
 ## Authors
 
 - [@aliciaapadron](https://github.com/aliciaapadron)
+
+## Api author
+
+- [@amamenko](https://github.com/amamenko/owen-wilson-wow-api)
