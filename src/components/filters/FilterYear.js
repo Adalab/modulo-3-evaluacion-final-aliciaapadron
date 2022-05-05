@@ -5,7 +5,7 @@ function FilterYear(props) {
   const renderYears = () => {
     return props.years.map((year, index) => {
       return (
-        <option value={year} key={index}>
+        <option className="option" value={year} key={index}>
           {year}
         </option>
       );
@@ -16,7 +16,9 @@ function FilterYear(props) {
       <fieldset className="fieldset">
         <label className="fieldset__label">Años</label>
         <select className="fieldset__select" onChange={handleChange}>
-          <option value="">Años</option>
+          <option className="option" value="">
+            Años
+          </option>
           {renderYears()}
         </select>
       </fieldset>

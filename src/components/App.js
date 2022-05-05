@@ -1,6 +1,6 @@
 import '../styles/App.scss';
 //rutas
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { matchPath, useLocation } from 'react-router-dom';
 
 //useState y useEffect
@@ -8,14 +8,13 @@ import { useState, useEffect } from 'react';
 
 //componentes
 import getApiData from '../services/api';
-import MovieList from './MovieList';
-import Filters from './Filters';
-import MovieDetail from './MovieDetail';
-import NotFoundPage from './NotFoundPage';
+import MovieList from '../components/movie/MovieList';
+import Filters from '../components/filters/Filters';
+import MovieDetail from '../components/movie/MovieDetail';
+import NotFoundPage from './applications/NotFoundPage';
 
 //localStorage
 import ls from '../services/localStorage';
-import ClearLocalStorage from './ResetButton';
 import Header from './Header';
 import Footer from './Footer';
 

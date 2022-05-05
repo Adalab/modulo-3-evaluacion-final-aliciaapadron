@@ -1,4 +1,4 @@
-import Movie from './Movie';
+import Movie from '../movie/Movie';
 function MovieList(props) {
   const movieElements = props.movies.map((movie, index) => {
     return (

@@ -21,13 +21,13 @@
       padding: 5px 0;
       display: flex;
       justify-content: center;
-      color: white;
+      color: $white;
     }
     &--year {
       padding: 5px 0;
       display: flex;
       justify-content: center;
-      color: grey;
+      color: rgb(158, 157, 157);
       font-weight: bolder;
     }
     &--quote {
@@ -37,7 +37,7 @@
       flex-wrap: wrap;
       text-align: center;
       justify-content: center;
-      color: grey;
+      color: $font-color;
       font-weight: bolder;
     }
   }
