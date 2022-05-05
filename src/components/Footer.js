@@ -1,10 +1,12 @@
 function Footer() {
   return (
     <>
-      <footer>
-        <h2>Creado por </h2>
+      <footer className="footer">
+        <h2 className="footer__title">Creado por </h2>
 
-        <a href="https://github.com/aliciaapadron">Alicia Padrón</a>
+        <a className="footer__link" href="https://github.com/aliciaapadron">
+          Alicia Padrón
+        </a>
       </footer>
     </>
   );
