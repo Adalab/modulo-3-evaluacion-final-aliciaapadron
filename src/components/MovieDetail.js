@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 function MovieDetail(props) {
   return (
     <section>
+      <Link to="/">Volver</Link>
       <img
         className="card__img"
         alt={props.movie.movie}

@@ -5,6 +5,7 @@ function FilterMovie(props) {
   const handleChange = (ev) => {
     props.handleFilterMovie(ev.target.value);
   };
+  console.log(props);
   return (
     <fieldset>
       <label htmlFor="name">Película</label>

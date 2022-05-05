@@ -12,11 +12,15 @@ import MovieList from './MovieList';
 import Filters from './Filters';
 import MovieDetail from './MovieDetail';
 
+//localStorage
+import ls from '../services/localStorage';
+import ClearLocalStorage from './ResetButton';
+
 //componentes de estado
 function App() {
-  const [dataMovies, setDataMovies] = useState([]);
-  const [filterMovie, setFilterMovie] = useState('');
-  const [filterYears, setFilterYears] = useState('');
+  const [dataMovies, setDataMovies] = useState(ls.get('movies', []));
+  const [filterMovie, setFilterMovie] = useState(ls.get('filterMovie', ''));
+  const [filterYears, setFilterYears] = useState(ls.get('filterYears', ''));
 
   //useEffect
   useEffect(() => {
@@ -27,6 +31,14 @@ function App() {
     }
   }, []);
 
+  //useEffect para localStorage
+  useEffect(() => {
+    ls.set('movies', dataMovies);
+    ls.set('filterMovie', filterMovie);
+    ls.set('filterYears', filterYears);
+  }, [dataMovies, filterMovie, filterYears]);
+
+  //prevenir el intro
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
@@ -40,7 +52,9 @@ function App() {
     setFilterYears(value);
   };
 
+  //filtros
   const movieFilters = dataMovies
+    .sort((a, b) => a.name.localeCompare(b.name))
     .filter((movie) => {
       return movie.name.toLowerCase().includes(filterMovie.toLocaleLowerCase());
     })
@@ -51,6 +65,8 @@ function App() {
         return filterYears.includes(movie.year);
       }
     });
+
+  //mensaje que error
   const searchMovies = () => {
     if (filterMovie !== '' && movieFilters.length === 0) {
       return (
@@ -63,18 +79,24 @@ function App() {
     }
   };
 
+  //coger los años de la lista
   const getYears = () => {
     const movieYears = dataMovies.map((movie) => movie.year);
     const uniqueYears = movieYears.filter((year, index) => {
       return movieYears.indexOf(year) === index;
     });
-    return uniqueYears;
+    return uniqueYears.sort();
     /*
         const uniqueYears = new Set(movieYears);
-        const uniques = [...uniqueYears];
+        const uniques = [...uniqueYears.sort()];
      ;*/
   };
 
+  //limpiar inputs
+  const resetInputs = () => {
+    setFilterMovie('');
+    setFilterYears('');
+  };
   const { pathname } = useLocation();
   const dataPath = matchPath('/movie/:movieId', pathname);
 
@@ -90,13 +112,15 @@ function App() {
             path="/"
             element={
               <>
+                {/* <ClearLocalStorage /> */}
                 <Filters
                   handleSubmit={handleSubmit}
                   handleFilterMovie={handleFilterMovie}
                   handleFilterYear={handleFilterYear}
+                  filterMovie={filterMovie}
                   years={getYears()}
+                  resetInputs={resetInputs}
                 />
-                {/* <MovieList movies={movieFilters} /> */}
                 {searchMovies()}
               </>
             }
@@ -105,6 +129,7 @@ function App() {
             path="/movie/:movieId"
             element={<MovieDetail movie={movieFound} />}
           />
+          <Route path="/" element={<MovieDetail />} />
         </Routes>
       </div>
     </>
