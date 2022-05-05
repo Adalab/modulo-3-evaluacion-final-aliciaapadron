@@ -13,13 +13,13 @@ function FilterYear(props) {
   };
   return (
     <>
-      <fielset className="fielset">
-        <label className="fielset__label">Años</label>
-        <select className="fielset__select" onChange={handleChange}>
+      <fieldset className="fieldset">
+        <label className="fieldset__label">Años</label>
+        <select className="fieldset__select" onChange={handleChange}>
           <option value="">Años</option>
           {renderYears()}
         </select>
-      </fielset>
+      </fieldset>
     </>
   );
 }

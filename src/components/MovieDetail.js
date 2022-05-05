@@ -5,6 +5,7 @@ import { faVideoCamera } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 function MovieDetail(props) {
+  console.log(props);
   return (
     <>
       <section className="detail">

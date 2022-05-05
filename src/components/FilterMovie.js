@@ -5,14 +5,13 @@ function FilterMovie(props) {
   const handleChange = (ev) => {
     props.handleFilterMovie(ev.target.value);
   };
-  console.log(props);
   return (
-    <fieldset className="fielset">
-      <label className="fielset__label" htmlFor="name">
+    <fieldset className="fieldset">
+      <label className="fieldset__label" htmlFor="name">
         Buscar por película
       </label>
       <input
-        className="fielset__input"
+        className="fieldset__input"
         type="search"
         name="name"
         id="name"

@@ -107,7 +107,7 @@ function App() {
   const dataPath = matchPath('/movie/:movieId', pathname);
 
   const movieId = dataPath !== null ? dataPath.params.movieId : null;
-  const movieFound = dataMovies.find((item) => item.id === movieId);
+  const movieFound = dataMovies.find((item) => item.id === parseInt(movieId));
 
   return (
     <>
