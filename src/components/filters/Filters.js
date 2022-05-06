@@ -13,7 +13,7 @@ function Filters(props) {
         <FilterYear
           years={props.years}
           handleFilterYear={props.handleFilterYear}
-          // filterYears={props.filterYears}
+          filterYears={props.filterYears}
         />
         <ResetButton resetInputs={props.resetInputs} />
       </form>

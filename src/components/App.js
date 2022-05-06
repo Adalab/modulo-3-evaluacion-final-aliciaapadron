@@ -117,7 +117,7 @@ function App() {
                   handleFilterMovie={handleFilterMovie}
                   handleFilterYear={handleFilterYear}
                   filterMovie={filterMovie}
-                  // filterYears={filterYears}
+                  filterYears={filterYears}
                   years={getYears(movieFilters)}
                   resetInputs={resetInputs}
                 />

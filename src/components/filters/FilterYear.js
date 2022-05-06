@@ -15,7 +15,11 @@ function FilterYear(props) {
     <>
       <fieldset className="fieldset">
         <label className="fieldset__label">Years</label>
-        <select className="fieldset__select" onChange={handleChange}>
+        <select
+          className="fieldset__select"
+          onChange={handleChange}
+          value={props.filterYears}
+        >
           <option className="option" value="">
             All
           </option>
