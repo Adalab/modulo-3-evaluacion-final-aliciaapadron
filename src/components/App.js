@@ -102,7 +102,6 @@ function App() {
 
   const movieId = dataPath !== null ? dataPath.params.movieId : null;
   const movieFound = dataMovies.find((item) => item.id === parseInt(movieId));
-
   return (
     <>
       <div>
