@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.b9f4adff.css",
+    "main.js": "./static/js/main.89d89ec2.js",
+    "static/media/owen-wilson-owen.gif": "./static/media/owen-wilson-owen.3f9eabde84d917b5a182.gif",
+    "index.html": "./index.html",
+    "main.b9f4adff.css.map": "./static/css/main.b9f4adff.css.map",
+    "main.89d89ec2.js.map": "./static/js/main.89d89ec2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9f4adff.css",
+    "static/js/main.89d89ec2.js"
+  ]
+}
