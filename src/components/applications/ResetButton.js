@@ -5,7 +5,7 @@ const ResetButton = (props) => {
   };
   return (
     <>
-      <button className="btn" onClick={handleResetBtn}>
+      <button title="Borrar todo" className="btn" onClick={handleResetBtn}>
         Reset
       </button>
     </>

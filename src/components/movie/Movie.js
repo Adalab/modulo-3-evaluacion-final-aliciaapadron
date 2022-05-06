@@ -4,6 +4,7 @@ function User(props) {
   return (
     <Link to={`/movie/${props.movie.id}`}>
       <img
+        title="Ir a la película"
         className="list__item--img"
         alt={props.movie.movie}
         src={props.movie.poster}

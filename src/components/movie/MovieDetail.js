@@ -13,6 +13,7 @@ function MovieDetail(props) {
     <>
       <section className="detail">
         <img
+          title="Portada de la película"
           className="detail__img"
           alt={props.movie.movie}
           src={props.movie.poster}
@@ -38,6 +39,7 @@ function MovieDetail(props) {
           <article className="articlebtn">
             <div className="div">
               <a
+                title="Escuchar audio"
                 target="_blank"
                 className="div__audio"
                 href={props.movie.audio}
@@ -46,7 +48,7 @@ function MovieDetail(props) {
               </a>
             </div>
             <div className="div">
-              <Link className="div__btn" to="/">
+              <Link className="div__btn" to="/" title="Volver al inicio">
                 Back
               </Link>
             </div>
