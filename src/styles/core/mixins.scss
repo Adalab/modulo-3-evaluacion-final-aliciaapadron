@@ -1,0 +1,9 @@
+@mixin tablet {
+  @media all and (min-width: 780px) {
+    @content;
+  }
+}
+
+// @include tablet()() {
+
+// }

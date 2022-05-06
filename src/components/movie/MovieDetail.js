@@ -31,16 +31,22 @@ function MovieDetail(props) {
             Quote: "{props.movie.quote}"
           </p>
 
-          <div className="div">
-            <a target="_blank" className="div__audio" href={props.movie.audio}>
-              Audio
-            </a>
-          </div>
-          <div className="div">
-            <Link className="div__btn" to="/">
-              Back
-            </Link>
-          </div>
+          <article className="articlebtn">
+            <div className="div">
+              <a
+                target="_blank"
+                className="div__audio"
+                href={props.movie.audio}
+              >
+                Audio
+              </a>
+            </div>
+            <div className="div">
+              <Link className="div__btn" to="/">
+                Back
+              </Link>
+            </div>
+          </article>
         </article>
       </section>
       <Footer />

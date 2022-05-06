@@ -1,10 +1,13 @@
 .fieldset {
   &__select {
     border-radius: 10px;
-    margin-left: 1px;
     color: $black;
     background-color: $secondwhite;
-    width: 100px;
+    width: 65px;
+    @include tablet() {
+      width: 100px;
+      margin-left: 1px;
+    }
   }
 }
 

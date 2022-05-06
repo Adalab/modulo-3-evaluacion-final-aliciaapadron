@@ -4,16 +4,25 @@
   align-items: center;
   justify-content: center;
   &__logo {
-    height: 300px;
+    height: 180px;
     margin: 40px;
+    @include tablet() {
+      height: 300px;
+    }
   }
   &__title {
-    font-size: 40px;
+    font-size: 25px;
     padding: 10px;
+    @include tablet() {
+      font-size: 40px;
+    }
 
     &__span {
       color: $yellow;
-      font-size: 50px;
+      font-size: 30px;
+      @include tablet() {
+        font-size: 50px;
+      }
     }
   }
 }

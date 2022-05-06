@@ -2,8 +2,14 @@
   border-radius: 10px;
   color: $yellow;
   background-color: $specialgrey;
-  width: 80px;
+  margin-top: 23px;
+  width: 48px;
+  height: 40px;
+  font-size: 12px;
   font-weight: bold;
+  @include tablet() {
+    width: 80px;
+  }
 }
 .btn:hover {
   color: $specialgrey;
