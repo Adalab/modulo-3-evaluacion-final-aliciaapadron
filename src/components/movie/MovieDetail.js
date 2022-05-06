@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideoCamera } from '@fortawesome/free-solid-svg-icons';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import NotFoundPage from '../applications/NotFoundPage';
 function MovieDetail(props) {
+  if (props.movie === undefined) {
+    return <NotFoundPage />;
+  }
   return (
     <>
       <section className="detail">

@@ -12,17 +12,19 @@ import MovieList from '../components/movie/MovieList';
 import Filters from '../components/filters/Filters';
 import MovieDetail from '../components/movie/MovieDetail';
 import NotFoundPage from './applications/NotFoundPage';
+import Header from './Header';
+import Footer from './Footer';
 
 //localStorage
 import ls from '../services/localStorage';
-import Header from './Header';
-import Footer from './Footer';
 
 //componentes de estado
 function App() {
   const [dataMovies, setDataMovies] = useState(ls.get('movies', []));
-  const [filterMovie, setFilterMovie] = useState(ls.get('filterMovie', ''));
-  const [filterYears, setFilterYears] = useState(ls.get('filterYears', ''));
+  const [filterMovie, setFilterMovie] = useState('');
+  const [filterYears, setFilterYears] = useState('');
+  // const [filterMovie, setFilterMovie] = useState(ls.get('filterMovie', ''));
+  // const [filterYears, setFilterYears] = useState(ls.get('filterYears', ''));
 
   //useEffect
   useEffect(() => {
@@ -36,9 +38,10 @@ function App() {
   //useEffect para localStorage
   useEffect(() => {
     ls.set('movies', dataMovies);
-    ls.set('filterMovie', filterMovie);
-    ls.set('filterYears', filterYears);
-  }, [dataMovies, filterMovie, filterYears]);
+    // ls.set('filterMovie', filterMovie);
+    // ls.set('filterYears', filterYears);
+  }, [dataMovies]);
+  // [dataMovies, filterMovie, filterYears]);
 
   //prevenir el intro
   const handleSubmit = (ev) => {
