@@ -23,8 +23,6 @@ function App() {
   const [dataMovies, setDataMovies] = useState(ls.get('movies', []));
   const [filterMovie, setFilterMovie] = useState('');
   const [filterYears, setFilterYears] = useState('');
-  // const [filterMovie, setFilterMovie] = useState(ls.get('filterMovie', ''));
-  // const [filterYears, setFilterYears] = useState(ls.get('filterYears', ''));
 
   //useEffect
   useEffect(() => {
@@ -38,10 +36,7 @@ function App() {
   //useEffect para localStorage
   useEffect(() => {
     ls.set('movies', dataMovies);
-    // ls.set('filterMovie', filterMovie);
-    // ls.set('filterYears', filterYears);
   }, [dataMovies]);
-  // [dataMovies, filterMovie, filterYears]);
 
   //prevenir el intro
   const handleSubmit = (ev) => {
@@ -89,16 +84,12 @@ function App() {
   };
 
   //coger los años de la lista
-  const getYears = () => {
-    const movieYears = dataMovies.map((movie) => movie.year);
+  const getYears = (movies) => {
+    const movieYears = movies.map((movie) => movie.year);
     const uniqueYears = movieYears.filter((year, index) => {
       return movieYears.indexOf(year) === index;
     });
     return uniqueYears.sort();
-    /*
-        const uniqueYears = new Set(movieYears);
-        const uniques = [...uniqueYears.sort()];
-     ;*/
   };
 
   //limpiar inputs
@@ -126,7 +117,8 @@ function App() {
                   handleFilterMovie={handleFilterMovie}
                   handleFilterYear={handleFilterYear}
                   filterMovie={filterMovie}
-                  years={getYears()}
+                  // filterYears={filterYears}
+                  years={getYears(movieFilters)}
                   resetInputs={resetInputs}
                 />
                 {searchMovies()}
