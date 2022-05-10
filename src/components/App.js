@@ -23,15 +23,16 @@ function App() {
   const [dataMovies, setDataMovies] = useState(ls.get('movies', []));
   const [filterMovie, setFilterMovie] = useState('');
   const [filterYears, setFilterYears] = useState('');
+  const [filterResults, setFilterResults] = useState(50);
 
   //useEffect
   useEffect(() => {
     if (dataMovies.length === 0) {
-      getApiData().then((dataFromApi) => {
+      getApiData(filterResults).then((dataFromApi) => {
         setDataMovies(dataFromApi);
       });
     }
-  }, []);
+  }, [filterResults]);
 
   //useEffect para localStorage
   useEffect(() => {
@@ -51,7 +52,10 @@ function App() {
   const handleFilterYear = (value) => {
     setFilterYears(value);
   };
-
+  //filtro de api
+  const handleFilterResults = (value) => {
+    setFilterResults(value);
+  };
   //filtros
   const movieFilters = dataMovies
     .sort((a, b) => a.name.localeCompare(b.name))
@@ -64,6 +68,9 @@ function App() {
       } else {
         return filterYears.includes(movie.year);
       }
+    })
+    .filter((movie, index) => {
+      return index < filterResults;
     });
 
   //mensaje que error
@@ -96,6 +103,7 @@ function App() {
   const resetInputs = () => {
     setFilterMovie('');
     setFilterYears('');
+    setFilterResults(50);
   };
   const { pathname } = useLocation();
   const dataPath = matchPath('/movie/:movieId', pathname);
@@ -119,6 +127,8 @@ function App() {
                   filterYears={filterYears}
                   years={getYears(movieFilters)}
                   resetInputs={resetInputs}
+                  handleFilterResults={handleFilterResults}
+                  filterResults={filterResults}
                 />
                 {searchMovies()}
                 <Footer />

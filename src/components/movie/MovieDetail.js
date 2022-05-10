@@ -48,6 +48,16 @@ function MovieDetail(props) {
               </a>
             </div>
             <div className="div">
+              <a
+                title="Ver vídeo"
+                target="_blank"
+                className="div__audio"
+                href={props.movie.video}
+              >
+                Video
+              </a>
+            </div>
+            <div className="div">
               <Link className="div__btn" to="/" title="Volver al inicio">
                 Back
               </Link>

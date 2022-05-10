@@ -1,6 +1,7 @@
 import FilterMovie from './FilterMovie';
 import FilterYear from './FilterYear';
 import ResetButton from '../applications/ResetButton';
+import FilterResults from './FilterResults';
 
 function Filters(props) {
   return (
@@ -14,6 +15,10 @@ function Filters(props) {
           years={props.years}
           handleFilterYear={props.handleFilterYear}
           filterYears={props.filterYears}
+        />
+        <FilterResults
+          handleFilterResults={props.handleFilterResults}
+          filterResults={props.filterResults}
         />
         <ResetButton resetInputs={props.resetInputs} />
       </form>

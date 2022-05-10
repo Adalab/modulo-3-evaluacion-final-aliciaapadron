@@ -1,6 +1,6 @@
 const Input = (props) => {
   const handleChange = (ev) => {
-    props.handleFilterMovie(ev.target.value);
+    props.handleFunction(ev.target.value);
   };
   return (
     <>

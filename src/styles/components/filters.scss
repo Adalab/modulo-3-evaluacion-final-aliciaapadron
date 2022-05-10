@@ -1,5 +1,9 @@
 .form {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   padding: 30px;
+  @include tablet() {
+    flex-direction: initial;
+  }
 }
