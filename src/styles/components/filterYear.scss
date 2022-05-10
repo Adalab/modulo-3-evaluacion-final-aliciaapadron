@@ -3,9 +3,9 @@
     border-radius: 10px;
     color: $black;
     background-color: $secondwhite;
-    width: 170px;
+    width: 100%;
     @include tablet() {
-      width: 100px;
+      width: 230px;
       margin-left: 1px;
     }
   }

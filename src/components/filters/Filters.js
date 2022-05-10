@@ -7,6 +7,10 @@ function Filters(props) {
   return (
     <section>
       <form className="form" onSubmit={props.handleSubmit}>
+        <FilterResults
+          handleFilterResults={props.handleFilterResults}
+          filterResults={props.filterResults}
+        />
         <FilterMovie
           handleFilterMovie={props.handleFilterMovie}
           filterMovie={props.filterMovie}
@@ -16,10 +20,7 @@ function Filters(props) {
           handleFilterYear={props.handleFilterYear}
           filterYears={props.filterYears}
         />
-        <FilterResults
-          handleFilterResults={props.handleFilterResults}
-          filterResults={props.filterResults}
-        />
+
         <ResetButton resetInputs={props.resetInputs} />
       </form>
     </section>

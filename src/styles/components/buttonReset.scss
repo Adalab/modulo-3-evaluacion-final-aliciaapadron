@@ -1,14 +1,18 @@
-.btn {
-  border-radius: 10px;
-  color: $yellow;
-  background-color: $specialgrey;
-  margin-top: 23px;
-  width: 48px;
-  height: 40px;
-  font-size: 12px;
-  font-weight: bold;
-  @include tablet() {
-    width: 80px;
+.divbtn {
+  display: flex;
+  justify-content: center;
+  &__btn {
+    border-radius: 10px;
+    color: $yellow;
+    background-color: $specialgrey;
+    margin-top: 23px;
+    width: 48px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    @include tablet() {
+      width: 80px;
+    }
   }
 }
 .btn:hover {

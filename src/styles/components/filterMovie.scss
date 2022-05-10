@@ -16,7 +16,7 @@
     padding-left: 7px;
     color: $black;
     background-color: $secondwhite;
-    width: 170px;
+    width: 100%;
     @include tablet() {
       width: 230px;
     }
